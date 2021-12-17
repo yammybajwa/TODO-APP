@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
 </head>
-<body>
-    
+
+<body onload="getTodosFromLocalStorage()" onunload="saveTodosInLocalStorage()">
+    <form id="todoForm">
+        <input type="text" id="todoInput" />
+        <button type="submit" id="todoSubmitButton">Add</button>
+        <button type="button" id="updateButton" style="display: none">
+            Update
+        </button>
+    </form>
+    <ul id="todos"></ul>
+
     <script src="./script.js"></script>
 </body>
+
 </html>
